@@ -27,7 +27,7 @@
                         <h4 class="mb-0">Submit Your Recipe</h4>
                     </div>
                     <div class="card-body">
-                        <form id="recipeForm" action="submitRecipe.php" method="POST" enctype="multipart/form-data">
+                        <form id="recipeForm" action="submit-recipe-controller.php" method="POST" enctype="multipart/form-data">
                             <!-- Recipe Title -->
                             <div class="mb-3">
                                 <label for="title" class="form-label">Recipe Title:</label>
