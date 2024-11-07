@@ -6,9 +6,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Recipe Form</title>
 
-    <!-- Bootstrap, Browser Icon, Stylesheet -->
-    <?php include '../../includes/head-elements.php'; ?>
-    
+        <!-- Browser Icon -->
+        <!-- <link rel="icon" href="images/icon.png" type="image/png"> -->
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Bundle JS (with Popper) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!--CSS Stylesheet -->
+    <link href="../../css/style.css" rel="stylesheet">
+
     <script src="../../js/recipe-form-handler.js" defer></script>
 
 
@@ -54,12 +62,12 @@
                                 </div>
                             </div>
                             <div class="mb-3">
-                            <p>You may add another header and more ingredients, for example, if you need to add another section for "Frosting". </p>
+                                <p>You may add another header and more ingredients, for example, if you need to add another section for "Frosting". </p>
                             </div>
                             <!-- Button to add more headers -->
                             <div class="mb-3 d-flex gap-2">
-                                
-                                <button type="button" id="addHeaderButton" class="btn btn-secondary">Add Header</button>                               
+
+                                <button type="button" id="addHeaderButton" class="btn btn-secondary">Add Header</button>
                                 <button type="button" id="deleteHeaderButton" class="btn btn-danger">Delete Header</button>
                             </div>
 
@@ -71,7 +79,7 @@
 
                             <!-- Submit Button -->
                             <button type="submit" class="btn btn-success">Submit Recipe</button>
-                            
+
                         </form>
                     </div>
                 </div>
