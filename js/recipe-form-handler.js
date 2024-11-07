@@ -1,12 +1,14 @@
+// Variable to hold additional header count
 let headerCount = 1;
 
+// Function to add a sub header to recipe
 function addHeader() {
-    console.log("Add Header button clicked");
+    console.log("Add Header button clicked");//testing
     headerCount++;
     
     const headerSection = document.createElement('div');
     headerSection.classList.add('header-section', 'mb-3');
-    headerSection.id = `header-section-${headerCount}`; // Assign unique ID to each header section
+    headerSection.id = `header-section-${headerCount}`; // Assign unique ID to each header section for database
     headerSection.innerHTML = `
         <label for="header-${headerCount}" class="form-label">Header ${headerCount}:</label>
         <input type="text" id="header-${headerCount}" name="headers[]" class="form-control" required>
@@ -22,8 +24,9 @@ function addHeader() {
     document.getElementById('headerContainer').appendChild(headerSection);
 }
 
+// Function to delete sub header and ingredients associated with sub header
 function deleteHeader() {
-    console.log("delete header clicked");
+    console.log("delete header clicked");//testing
     if (headerCount > 1) {
         const lastHeader = document.getElementById(`header-section-${headerCount}`);
         if (lastHeader) {
@@ -35,8 +38,9 @@ function deleteHeader() {
     }
 }
 
+// Function to add an ingredient associated with a header for relational database
 function addIngredient(headerId) {
-    console.log(`Add Ingredient button clicked for header ${headerId}`);
+    console.log(`Add Ingredient button clicked for header ${headerId}`);//testing
     const ingredientList = document.getElementById(`ingredient-list-${headerId}`);
     
     const ingredientItem = document.createElement('div');
@@ -49,16 +53,17 @@ function addIngredient(headerId) {
     ingredientList.appendChild(ingredientItem);
 }
 
+// Function to remove additional ingredients
 function removeIngredient(button) {
-    console.log("Remove Ingredient button clicked");
+    console.log("Remove Ingredient button clicked");//testing
     button.parentElement.remove();
 }
 
-// Attach event listeners to Add Header and Delete Header buttons
+// Attach event listeners to Add Header and Delete Header buttons (static buttons)
 document.getElementById('addHeaderButton').addEventListener('click', addHeader);
 document.getElementById('deleteHeaderButton').addEventListener('click', deleteHeader);
 
-// Event delegation for dynamically added Add/Remove Ingredient buttons
+// Event listeners for dynamically added Add/Remove Ingredient buttons (dynamic buttons)
 document.getElementById('headerContainer').addEventListener('click', function (event) {
     if (event.target && event.target.matches(".add-ingredient-btn")) {
         const headerId = event.target.getAttribute("data-header-id");

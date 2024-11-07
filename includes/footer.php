@@ -1,3 +1,4 @@
+<!-- Dynamic Year Functionality -->
 <script>
         document.addEventListener("DOMContentLoaded", function() {
             const currentYear = new Date().getFullYear();
