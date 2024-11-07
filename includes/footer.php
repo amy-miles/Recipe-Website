@@ -7,7 +7,7 @@
 
 <footer class="footer bg-dark text-white">
     <div class="container d-flex align-items-center justify-content-start position-relative">
-        <!-- Homework dropdown -->
+        <!-- Dropdown -->
         <div class="me-auto">
             <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                 Dropdown
